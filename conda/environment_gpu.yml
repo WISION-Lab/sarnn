@@ -1,0 +1,25 @@
+name: sarnn
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+# Uncomment if you want to build the documentation
+#  - sphinx
+#  - sphinx_rtd_theme
+
+# Uncomment if you want to use PyNN with the NEURON backend simulator
+#  - neuron>=7.4,<7.6
+
+# Essential/core dependencies
+  - cudatoolkit=10.1  # Use cudatoolkit-dev to resolve ptxas warnings
+  - cudnn=7.6
+  - nlopt=2.6  # For nonlinear derivative-free optimization (optimization.py)
+  - pip=21.0
+  - python=3.6
+  - scikit-image=0.16  # For drawing (visualization.py)
+  - pip:
+    - mpi4py==3.0.*  # Required even if MPI acceleration is not being used
+    - pyNN==0.9.5
+    - tensorflow==2.3.*

@@ -1,0 +1,6 @@
+# Sorted in ascending order
+__pycache__
+.DS_Store
+.idea
+*.pyc
+docs/_build
